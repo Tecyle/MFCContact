@@ -1,0 +1,1036 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Contact.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Contact.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\Book.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\Note.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\cc.ICO"
+IDI_ICON4               ICON    DISCARDABLE     "res\\Log File LOG.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\Network Neighbourhood.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\User.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\Find.ico"
+IDI_ICON8               ICON    DISCARDABLE     "res\\Excel.ICO"
+IDI_ICON9               ICON    DISCARDABLE     "res\\WindowsC.ico"
+IDI_ICON10              ICON    DISCARDABLE     "res\\ACER.ICO"
+IDI_ICON11              ICON    DISCARDABLE     "res\\Bookshelf.ico"
+IDI_ICON12              ICON    DISCARDABLE     "res\\Charfx.ico"
+IDI_ICON13              ICON    DISCARDABLE     "res\\CheckBook.ico"
+IDI_ICON14              ICON    DISCARDABLE     "res\\folder users.ico"
+IDI_ICON15              ICON    DISCARDABLE     "res\\icon15.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于通讯录"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_ICON10,IDC_STATIC,11,17,20,20
+    LTEXT           "通讯录软件 Beta 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "我知道了",IDOK,169,7,59,18,WS_GROUP
+END
+
+IDD_CONTACT_DIALOG DIALOGEX 0, 0, 390, 315
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "通讯录软件"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "查找记录",IDC_FINDFRAME,5,3,125,57,BS_CENTER
+    CONTROL         "查找字段(&R):",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,11,16,49,8,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_CMB_IF,62,13,64,114,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "查找内容(&C):",IDC_STATIC2,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,11,31,49,8,WS_EX_TRANSPARENT
+    GROUPBOX        "所有记录",IDC_TV_FRAME,5,62,125,247,BS_CENTER
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,133,5,252,304
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    8,72,117,231
+    EDITTEXT        IDC_EDIT_SEARCH,9,45,93,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "→",IDC_BTN_SEARCH,105,33,20,22
+    CONTROL         "向前",IDC_CHK_FORWARD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,61,31,39,12
+END
+
+IDD_MAIN_PAGE1 DIALOG DISCARDABLE  0, 0, 211, 260
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "检索方式(&F):",IDC_STATIC,6,13,47,8
+    COMBOBOX        IDC_NAME_LIST,54,11,149,187,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "基本信息",IDC_STATIC,2,77,204,138
+    PUSHBUTTON      "保存修改(&E)",IDC_SAVE_EDIT1,2,220,94,14
+    PUSHBUTTON      "添加记录(&A)...",IDC_BTN_ADDP,112,220,94,14
+    PUSHBUTTON      "删除本条记录(&D)",IDC_DEL_NOWPSN,2,241,94,14
+    PUSHBUTTON      "刷新(&U)",IDC_PG1_UPDATE,112,241,94,14
+    GROUPBOX        "检索成员",IDC_STATIC,2,2,204,73
+    CONTROL         "List1",IDC_CTCLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    WS_BORDER | WS_TABSTOP,6,26,196,45
+    LTEXT           "姓名(&N):",IDC_STATIC,6,89,32,8
+    LTEXT           "性别(&S):",IDC_STATIC,6,106,32,8
+    LTEXT           "专业(&M):",IDC_STATIC,6,123,32,8
+    LTEXT           "手机(&B):",IDC_STATIC,6,140,32,8
+    LTEXT           "住址(&R):",IDC_STATIC,6,157,32,8
+    LTEXT           "主页(&H):",IDC_STATIC,6,174,32,8
+    LTEXT           "备注(&O):",IDC_STATIC,6,191,32,8
+    EDITTEXT        IDC_INPUT_NAME,39,88,89,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "<<",IDC_NPAGE_FIRST,132,87,16,14
+    PUSHBUTTON      "<",IDC_NPAGE_PREV,149,87,16,14
+    PUSHBUTTON      ">",IDC_NPAGE_NEXT,166,87,16,14
+    PUSHBUTTON      ">>",IDC_NPAGE_LAST,183,87,16,14
+    CONTROL         "男",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,39,105,23,10
+    CONTROL         "女",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,66,105,23,10
+    EDITTEXT        IDC_INPUT_MAJOR,39,120,161,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INPUT_MOBI,39,138,161,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INPUT_ADDR,39,156,161,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INPUT_HOME,39,172,161,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INPUT_MEMO,39,189,161,12,ES_AUTOHSCROLL
+END
+
+IDD_WELCOME DIALOGEX 0, 0, 195, 190
+STYLE WS_POPUP
+EXSTYLE WS_EX_STATICEDGE
+FONT 10, "宋体"
+BEGIN
+    CONTROL         173,IDC_STATIC,"Static",SS_BITMAP,0,0,194,193
+END
+
+IDD_MAIN_PAGE2 DIALOG DISCARDABLE  0, 0, 205, 264
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "基本信息",IDC_STATIC,2,88,201,124,BS_CENTER
+    LTEXT           "姓名(&N):",IDC_STATIC,9,101,32,8
+    LTEXT           "生日(&B):",IDC_STATIC,9,118,32,8
+    LTEXT           "籍贯(&P):",IDC_STATIC,9,136,32,8
+    LTEXT           "性别(&S):",IDC_STATIC,9,154,32,8
+    LTEXT           "分组(&G):",IDC_STATIC,9,173,32,8
+    LTEXT           "职务(&O):",IDC_STATIC,9,190,32,8
+    EDITTEXT        IDC_B_INPUTNAME,42,99,156,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_B_INPUTPROV,42,136,156,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_B_INPUTPOSIT,42,189,157,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "保存修改(&E)",IDC_SAVE_EDIT2,5,217,95,15
+    PUSHBUTTON      "添加分组(&A)...",IDC_M_NTEAM,106,218,93,15
+    COMBOBOX        IDC_CMB_INPUTTEAM,42,170,157,124,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "刷新(&U)",IDC_PG2_UPDATE,5,237,95,15
+    PUSHBUTTON      "删除分组(&D)",IDC_BUTTON4,106,237,93,15
+    GROUPBOX        "分组检索",IDC_STATIC,3,2,201,84
+    LTEXT           "组名(&M):",IDC_STATIC,7,15,32,8
+    COMBOBOX        IDC_CMB_TEAM,39,12,161,74,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "List1",IDC_TLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,6,29,193,52
+    CONTROL         "男",IDC_B_MAN,"Button",BS_AUTORADIOBUTTON,43,153,26,10
+    CONTROL         "女",IDC_B_WOMAN,"Button",BS_AUTORADIOBUTTON,73,153,26,
+                    10
+    EDITTEXT        IDC_EDIT_YEAR,42,116,30,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "年",IDC_STATIC,74,118,8,8
+    EDITTEXT        IDC_EDIT_MONTH,82,116,18,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "月",IDC_STATIC,101,118,8,8
+    EDITTEXT        IDC_EDIT_DAY,109,116,18,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "日",IDC_STATIC,128,118,8,8
+END
+
+IDD_MAIN_PAGE3 DIALOG DISCARDABLE  0, 0, 210, 260
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "学籍信息",IDC_STATIC,2,1,205,106,BS_CENTER
+    LTEXT           "专业(&M):",IDC_STATIC,6,13,32,8
+    LTEXT           "学校(&S):",IDC_STATIC,6,32,32,8
+    LTEXT           "班级(&C):",IDC_STATIC,6,51,32,8
+    LTEXT           "院系(&O):",IDC_STATIC,6,70,32,8
+    LTEXT           "年级(&G):",IDC_STATIC,6,89,32,8
+    EDITTEXT        IDC_S_MAJOR,39,11,164,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_S_SCHOOL,39,30,164,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_S_CLASS,39,49,164,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_S_COLLEGE,39,68,164,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_S_GRADE,39,87,164,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "保存编辑(&E)",IDC_SAVE_EDIT3,3,111,101,14
+    PUSHBUTTON      "刷新(&U)",IDC_PG3_UPDATE,105,110,101,14
+END
+
+IDD_MAIN_PAGE4 DIALOG DISCARDABLE  0, 0, 217, 268
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "联系方式",IDC_STATIC,3,2,203,153,BS_CENTER
+    LTEXT           "电话(&P):",IDC_STATIC,6,12,32,8
+    LTEXT           "手机(&M):",IDC_STATIC,6,31,32,8
+    LTEXT           "地址(&A):",IDC_STATIC,6,50,32,8
+    LTEXT           "邮编(&P):",IDC_STATIC,6,69,32,8
+    LTEXT           "  QQ(&Q):",IDC_STATIC,5,88,32,8
+    LTEXT           "邮箱(&E):",IDC_STATIC,6,107,32,8
+    LTEXT           "传真(&F):",IDC_STATIC,6,139,32,8
+    EDITTEXT        IDC_C_PHONE,39,11,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_MOBI,39,30,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_ADDRESS,39,49,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_POSTCODE,39,68,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_QQ,39,87,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_EMAIL,39,106,162,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_C_FAX,39,138,162,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "发邮件(&E)...",IDC_SEND_EMAIL,132,121,68,13
+    PUSHBUTTON      "保存编辑(&E)",IDC_SAVE_EDIT4,3,158,99,16
+    PUSHBUTTON      "刷新(&U)",IDC_PG4_UPDATE,106,158,99,16
+END
+
+IDD_MAIN_PAGE5 DIALOG DISCARDABLE  0, 0, 209, 268
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "其它信息",IDC_STATIC,3,2,204,237,BS_CENTER
+    LTEXT           "主页(&H):",IDC_STATIC,6,15,32,8
+    LTEXT           "备注(&B):",IDC_STATIC,6,142,32,8
+    EDITTEXT        IDC_M_HOME,39,13,163,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "访问主页(&G)...",IDC_VISIT,132,27,69,15
+    EDITTEXT        IDC_M_MEMO,39,49,163,185,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON      "保存修改(&E)",IDC_SAVE_EDIT5,2,242,101,14
+    PUSHBUTTON      "刷新(&U)",IDC_PG5_UPDATE,105,242,101,14
+END
+
+IDD_NEWDATA DIALOG DISCARDABLE  0, 0, 192, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建数据库"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,84,110,50,14
+    PUSHBUTTON      "非也",IDCANCEL,138,110,50,14
+    LTEXT           "数据库名(&N):",IDC_STATIC,5,10,47,8
+    EDITTEXT        IDC_NEW_TITLE,53,8,136,13,ES_AUTOHSCROLL
+    LTEXT           "访问密码(&P):",IDC_STATIC,5,30,47,8
+    EDITTEXT        IDC_NEW_PSWD,53,28,136,13,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "文件位置(&F):",IDC_STATIC,5,73,47,8
+    EDITTEXT        IDC_NEW_PATH,53,70,119,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,172,68,17,14
+    LTEXT           "确认密码(&R):",IDC_STATIC,5,49,47,8
+    EDITTEXT        IDC_NEW_PSWD2,53,47,136,13,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_CHECKPSWD DIALOG DISCARDABLE  0, 0, 187, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "身份验证"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,78,73,50,14
+    PUSHBUTTON      "非也",IDCANCEL,132,73,50,14
+    ICON            IDI_ICON4,IDC_STATIC,4,5,20,20
+    LTEXT           "您所要打开数据库设定了密码，请输入正确的密码以访问数据库内容，密码严格区分大小写：",
+                    IDC_STATIC,24,7,157,23
+    LTEXT           "数据库名(&N):",IDC_STATIC,6,36,47,8
+    LTEXT           "访问密码(&P):",IDC_STATIC,6,56,47,8
+    EDITTEXT        IDC_CHK_NAME,53,36,129,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_CHK_PSWD,53,54,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_NEW_PERSON DIALOG DISCARDABLE  0, 0, 187, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建联系人"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,134,8,50,14
+    PUSHBUTTON      "非也",IDCANCEL,134,26,50,14
+    LTEXT           "姓名(&N):",IDC_STATIC,6,8,32,8
+    LTEXT           "性别(&S):",IDC_STATIC,6,29,32,8
+    LTEXT           "专业(&Z):",IDC_STATIC,6,50,32,8
+    LTEXT           "手机(&B):",IDC_STATIC,6,71,32,8
+    LTEXT           "住址(&D):",IDC_STATIC,6,92,32,8
+    LTEXT           "主页(&H):",IDC_STATIC,6,113,32,8
+    LTEXT           "备注(&M):",IDC_STATIC,6,134,32,8
+    EDITTEXT        IDC_NP_NAME,39,7,91,13,ES_AUTOHSCROLL
+    CONTROL         "男",IDC_NP_R1,"Button",BS_AUTORADIOBUTTON,39,27,22,13
+    CONTROL         "女",IDC_NP_R2,"Button",BS_AUTORADIOBUTTON,66,27,22,13
+    EDITTEXT        IDC_NP_MAJOR,39,48,91,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NP_MOBI,39,69,91,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NP_ADDRESS,39,90,91,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NP_HOME,39,111,91,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NP_MEMO,39,132,91,13,ES_AUTOHSCROLL
+    LTEXT           "新建联系人的时候，联系人姓名是必须给出的，其它信息选填。联系人姓名可以重复，但为了防止混淆，不建议多个联系人同名。",
+                    IDC_STATIC,133,68,52,77,NOT WS_VISIBLE
+END
+
+IDD_D DIALOG DISCARDABLE  0, 0, 187, 72
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "定位"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,82,54,50,14
+    PUSHBUTTON      "非也",IDCANCEL,134,54,50,14
+    LTEXT           "我要查找第",IDC_STATIC,30,14,38,8
+    ICON            IDI_ICON2,IDC_STATIC,6,9,20,20
+    EDITTEXT        IDC_FIND_POS,70,13,23,11,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "条记录。",IDC_STATIC,95,15,38,8
+    EDITTEXT        IDC_BASE_INFOR,35,34,146,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+END
+
+IDD_FIND DIALOG DISCARDABLE  0, 0, 187, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,79,92,50,14
+    PUSHBUTTON      "非也",IDCANCEL,132,92,50,14
+    ICON            IDI_ICON7,IDC_STATIC,4,7,20,20
+    LTEXT           "请选择您需要查找的字段对整个数据库进行不完全匹配查找。查找以当前显示的联系人为起点。",
+                    IDC_STATIC,24,8,159,18
+    LTEXT           "查找字段(&R):",IDC_STATIC,6,34,47,8
+    LTEXT           "查找内容(&C):",IDC_STATIC,6,50,47,8
+    GROUPBOX        "查找方向",IDC_STATIC,6,62,176,25
+    CONTROL         "向后",IDC_F_RA1,"Button",BS_AUTORADIOBUTTON,21,73,42,10
+    CONTROL         "向前",IDC_F_RA2,"Button",BS_AUTORADIOBUTTON,90,73,42,10
+    COMBOBOX        IDC_FCMB_IF,53,32,129,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_F_FINDEDIT,53,48,128,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_F_INFOR,6,95,64,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+END
+
+IDD_NEW_TEAM DIALOG DISCARDABLE  0, 0, 187, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建联系组"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,79,47,50,14
+    PUSHBUTTON      "非也",IDCANCEL,133,46,50,14
+    ICON            IDI_ICON5,IDC_STATIC,7,12,18,20
+    LTEXT           "新联系组名(&N):",IDC_STATIC,34,9,54,8
+    EDITTEXT        IDC_EDIT_NTEAM,34,20,149,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_TEAM DIALOG DISCARDABLE  0, 0, 191, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑联系组"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,82,70,50,14
+    PUSHBUTTON      "非也",IDCANCEL,134,71,50,14
+    ICON            IDI_ICON5,IDC_STATIC,5,7,20,20
+    LTEXT           "一旦联系组的信息被修改，从属于愿组的联系人关于联系组的信息也会一起被修改。",
+                    IDC_STATIC,30,8,155,19
+    LTEXT           "欲改之组(&T):",IDC_STATIC,5,35,47,8
+    COMBOBOX        IDC_CMB_TEAMDOWN,52,33,134,68,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "新的组名(&N):",IDC_STATIC,5,56,47,8
+    EDITTEXT        IDC_EDIT_NEWTN,52,54,133,12,ES_AUTOHSCROLL
+END
+
+IDD_FP_TEAM DIALOG DISCARDABLE  0, 0, 250, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "组成员分配"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,143,164,50,14
+    PUSHBUTTON      "非也",IDCANCEL,197,164,50,14
+    GROUPBOX        "",IDC_STATIC,4,3,106,154
+    LTEXT           "组名(&T):",IDC_STATIC,8,11,32,8
+    COMBOBOX        IDC_CMB_GLIST1,40,10,67,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST1,7,27,98,124,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,142,3,106,154
+    LTEXT           "组名(&T):",IDC_STATIC,146,11,32,8
+    COMBOBOX        IDC_CMB_GLIST2,178,10,67,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,145,27,98,124,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "->",IDC_BTN_TORIGHT,112,63,26,16
+    PUSHBUTTON      "<-",IDC_BTN_TOLEFT,112,81,26,16
+    PUSHBUTTON      ">>",IDC_ALL_TORIGHT,112,44,26,16
+    PUSHBUTTON      "<<",IDC_ALL_TOLEFT,112,101,26,16
+END
+
+IDD_EDIT_PERSON DIALOG DISCARDABLE  0, 0, 173, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑联系人"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,65,141,50,14
+    PUSHBUTTON      "非也",IDCANCEL,118,141,50,14
+    LTEXT           "姓名(&N):",IDC_STATIC,5,7,32,8
+    LTEXT           "性别(&S):",IDC_STATIC,5,27,32,8
+    LTEXT           "专业(&M):",IDC_STATIC,5,47,32,8
+    LTEXT           "手机(&B):",IDC_STATIC,5,67,32,8
+    LTEXT           "住址(&A):",IDC_STATIC,5,87,32,8
+    LTEXT           "主页(&H):",IDC_STATIC,5,107,32,8
+    LTEXT           "备注(&O):",IDC_STATIC,5,127,32,8
+    COMBOBOX        IDC_EP_NAME,38,5,131,106,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EP_MAJOR,38,45,131,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EP_MOBI,38,65,131,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EP_ADDRESS,38,85,131,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EP_HOME,38,105,131,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EP_MEMO,38,125,131,12,ES_AUTOHSCROLL
+    CONTROL         "男",IDC_EP_RA1,"Button",BS_AUTORADIOBUTTON,38,26,29,12
+    CONTROL         "女",IDC_EP_RA2,"Button",BS_AUTORADIOBUTTON,73,26,29,12
+END
+
+IDD_KILL_PERSON DIALOG DISCARDABLE  0, 0, 187, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除联系人"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,79,48,50,14
+    PUSHBUTTON      "非也",IDCANCEL,133,48,50,14
+    ICON            IDI_ICON3,IDC_STATIC,5,4,18,20
+    LTEXT           "请选择您要删除的联系人(&P):",IDC_STATIC,29,9,122,9
+    COMBOBOX        IDC_KILL_LIST,30,20,152,45,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_KILL_GROUP DIALOG DISCARDABLE  0, 0, 187, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除联系组"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,76,42,50,14
+    PUSHBUTTON      "非也",IDCANCEL,129,42,50,14
+    ICON            IDI_ICON3,IDC_STATIC,3,4,20,20
+    LTEXT           "请选择要删除的联系组名(&G):",IDC_STATIC,28,9,122,11
+    COMBOBOX        IDC_KILL_GLIST,29,22,151,40,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_REPLACE_BOX DIALOG DISCARDABLE  0, 0, 187, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "替换数据"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "给我搜",IDOK,135,5,50,17
+    PUSHBUTTON      "够了",IDCANCEL,135,65,50,17
+    PUSHBUTTON      "给我换",IDC_REPLACE,135,25,50,17,WS_DISABLED
+    PUSHBUTTON      "全给我换了",IDC_REPLACE_ALL,135,45,50,17,WS_DISABLED
+    LTEXT           "搜索所有联系人中的",IDC_STATIC,29,9,60,8
+    ICON            IDI_ICON1,IDC_STATIC,5,9,20,20
+    COMBOBOX        IDC_REP_IF,30,20,102,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "条件属性中包含",IDC_STATIC,6,37,53,8
+    EDITTEXT        IDC_RP_FIND,6,49,125,13,ES_AUTOHSCROLL
+    LTEXT           "的联系人，将其对应的属性值替换为",IDC_STATIC,6,65,120,8
+    EDITTEXT        IDC_RP_REPL,6,76,125,13,ES_AUTOHSCROLL
+    GROUPBOX        "搜索结果",IDC_STATIC,5,93,180,87,BS_CENTER
+    CONTROL         "List1",IDC_FIND_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,103,173,72
+END
+
+IDD_EDIT_PSWD DIALOG DISCARDABLE  0, 0, 187, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改密码"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,76,92,50,14
+    PUSHBUTTON      "非也",IDCANCEL,130,92,50,14
+    LTEXT           "旧的密码(&O):",IDC_STATIC,5,33,47,8
+    ICON            IDI_ICON2,IDC_STATIC,5,7,18,20
+    LTEXT           "请务必记住自己修改的密码，密码严格区分大小写和全半角字符。",
+                    IDC_STATIC,30,9,150,18
+    EDITTEXT        IDC_OLD_PSWD,52,31,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "新的密码(&N):",IDC_STATIC,5,59,47,8
+    LTEXT           "确认密码(&R):",IDC_STATIC,5,76,47,8
+    EDITTEXT        IDC_NEW_PSWD1,52,57,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NEW_PSWD2,52,74,129,12,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_IN_CSV DIALOG DISCARDABLE  0, 0, 187, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导入CSV数据表"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,82,163,50,14
+    PUSHBUTTON      "非也",IDCANCEL,134,163,50,14
+    LTEXT           "目前选择的文件(&F):",IDC_STATIC,24,5,69,8
+    ICON            IDI_ICON8,IDC_STATIC,3,4,20,20
+    EDITTEXT        IDC_CSV_FILE,24,17,137,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "...",IDC_CSV_BROWSE,162,15,21,12
+    LTEXT           "字段匹配(&R):",IDC_STATIC,5,43,47,8
+    CONTROL         "List1",IDC_REC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,5,55,180,86
+    LTEXT           "数据库名(&N):",IDC_STATIC,5,31,47,8
+    EDITTEXT        IDC_CSV_NAME,52,29,132,12,ES_AUTOHSCROLL
+    LTEXT           "绑定字段(&B):",IDC_STATIC,11,145,47,8
+    COMBOBOX        IDC_CMB_REC,58,143,126,125,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_IN_TXT DIALOG DISCARDABLE  0, 0, 201, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导入TXT文件"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "然也",IDOK,89,91,50,14,WS_DISABLED
+    PUSHBUTTON      "非也",IDCANCEL,143,91,50,14
+    ICON            IDI_ICON13,IDC_STATIC,4,7,20,20
+    LTEXT           "导入TXT文本文件的时候，每一行文本将被作为一个联系人的姓名处理，根据文件中的不同内容创建联系人。",
+                    IDC_STATIC,26,9,168,23
+    LTEXT           "文件路径(&P):",IDC_STATIC,5,39,47,8
+    EDITTEXT        IDC_TXT_FILE,5,51,190,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "浏览(&B)...",IDC_TXT_BROWSE,134,66,60,16
+END
+
+IDD_SHOW_ALLINFOR DIALOG DISCARDABLE  0, 0, 223, 227
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数据库信息"
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,168,208,50,14
+    ICON            IDI_ICON10,IDC_STATIC,5,5,18,20
+    LTEXT           "数据库名(&D):",IDC_STATIC,28,9,47,8
+    EDITTEXT        IDC_DATA_NAME,76,9,142,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "分组个数(&G):",IDC_STATIC,28,26,47,8
+    LTEXT           "记录个数(&P):",IDC_STATIC,28,43,47,8
+    ICON            IDI_ICON5,IDC_STATIC,5,65,18,20
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,28,65,190,45
+    EDITTEXT        IDC_TEAM_COUNT,76,26,142,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_REC_COUNT,76,43,142,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    ICON            IDI_ICON2,IDC_STATIC,5,119,18,20
+    CONTROL         "List1",IDC_LIST2,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,28,119,190,84
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "TecyleSoft\0"
+            VALUE "FileDescription", "TecyleSoft 通讯录程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Contact\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Contact.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "通讯录程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_WELCOME, DIALOG
+    BEGIN
+        RIGHTMARGIN, 194
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建数据库(&N)...\tCtrl + N", IDM_FILE_NEW
+        MENUITEM "打开数据库(&O)...\tCtrl + O", IDM_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl + S",          IDM_FILE_SAVE
+        MENUITEM "另存为(&A)...",               IDM_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        POPUP "导入数据(&I)"
+        BEGIN
+            MENUITEM "导入TXT文本信息(&T)...",      IDM_IN_TXT
+            MENUITEM "导入CSV数据表信息(&C)...",    ID_IN_CSV
+        END
+        POPUP "导出数据(&O)"
+        BEGIN
+            MENUITEM "导出TXT文本信息(&T)...",      IDM_OUT_TXT
+            MENUITEM "导出CSV数据表信息(&C)...",    IDM_OUT_CSV
+        END
+        MENUITEM "备份数据库(&P)...",           IDM_FILE_PACK
+        MENUITEM SEPARATOR
+        MENUITEM "关闭数据库(&C)",              IDM_FILE_CLOSE
+        MENUITEM "退出(&E)\tAlt + F4",          IDM_FILE_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "刷新(&R)\tF5",                IDM_EDIT_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "新建联系人(&P)...\tCtrl + W", IDM_PERSON_NEW
+        MENUITEM "编辑联系人(&O)...",           IDM_PERSON_EDIT
+        MENUITEM "删除联系人(&D)...\tDel",      IDM_PERSON_DEL
+        MENUITEM SEPARATOR
+        MENUITEM "新建联系组(&G)...\tCtrl + G", IDM_GROUP_NEW
+        MENUITEM "编辑联系组(&R)...",           IDM_GROUP_EDIT
+        MENUITEM "删除联系组(&E)...",           IDM_GROUP_DEL
+        MENUITEM "组成员(&M)...",               IDM_GROUP_MEMBER
+        MENUITEM SEPARATOR
+        MENUITEM "查找记录(&F)...\tCtrl + F",   IDM_FILE_FIND
+        MENUITEM "替换记录(&L)...\tCtrl + H",   IDM_EDIT_REPLACE
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "显示/隐藏树形结构(&R)",       IDM_SHOW_TREEVIEW, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "显示联系人主要信息(&S)",      IDM_SHOW_MAIN, CHECKED
+        MENUITEM "显示联系人基本信息(&B)",      IDM_SHOW_BASEINFOR, CHECKED
+        MENUITEM "显示联系人学籍信息(&L)",      IDM_SHOW_STUDY, CHECKED
+        MENUITEM "显示联系人联系方式(&C)",      IDM_SHOW_CONTACT, CHECKED
+        MENUITEM "显示联系人其它信息(&O)",      IDM_SHOW_OTHER, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "定位(&P)...",                 IDM_SHOW_GOTO
+        MENUITEM SEPARATOR
+        MENUITEM "第一条记录(&F)",              IDM_SHOW_FIRST
+        MENUITEM "最后一条记录(&A)",            IDM_SHOW_LAST
+        MENUITEM "下一条记录(&N)\t→",          IDM_SHOW_NEXT
+        MENUITEM "上一条记录(&E)\t←",          IDM_SHOW_PREVIOUS
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "修改数据库密码(&P)...",       IDM_TOOL_PSWD
+        MENUITEM SEPARATOR
+        MENUITEM "生日提示(&B)...",             IDM_TOOL_BIRTH
+        MENUITEM "显示数据库详细信息(&D)...",   IDM_TOOL_SHOWALL
+        MENUITEM SEPARATOR
+        MENUITEM "记事本(&N)",                  IDM_TOOL_NOTEPAD
+        MENUITEM "计算器(&A)",                  IDM_TOOL_CALC
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题(&C)...\tF1",         IDM_HELP_CONTENT
+        MENUITEM "程序说明(&S)...",             IDM_HELP_MEMO
+        MENUITEM "我的主页(&H)",                IDM_HELP_WEB
+        MENUITEM SEPARATOR
+        MENUITEM "关于 通讯录软件(&A)",         ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CONTACT_DIALOG DLGINIT
+BEGIN
+    IDC_CMB_IF, 0x403, 5, 0
+0xd5d0, 0xfbc3, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xf6b3, 0xfac9, 0xd5c8, 0xdac6, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xaebc, 0xe1b9, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xd4d0, 0xf0b1, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xf9cb, 0xf4ca, 0xd6b7, 0xe9d7, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xb0d6, 0xf1ce, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xa8d7, 0xb5d2, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xa7d1, 0xa3d0, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xe0b0, 0xb6bc, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xbad4, 0xb5cf, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xeac4, 0xb6bc, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xe7b5, 0xb0bb, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xd6ca, 0xfabb, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xa1d7, 0xb7d6, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xcad3, 0xe0b1, "\000" 
+    IDC_CMB_IF, 0x403, 3, 0
+0x5151, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xe7b5, 0xd3d7, 0xcad3, 0xe4cf, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xabb4, 0xe6d5, "\000" 
+    IDC_CMB_IF, 0x403, 9, 0
+0xf6b8, 0xcbc8, 0xf7d6, 0xb3d2, "\000" 
+    IDC_CMB_IF, 0x403, 5, 0
+0xb8b1, 0xa2d7, "\000" 
+    0
+END
+
+IDD_MAIN_PAGE1 DLGINIT
+BEGIN
+    IDC_NAME_LIST, 0x403, 5, 0
+0xf9cb, 0xd0d3, "\000" 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0041, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0042, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0043, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0044, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0045, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0046, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0047, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0048, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0049, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004a, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004b, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004c, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004d, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004e, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x004f, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0050, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0051, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0052, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0053, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0054, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0055, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0056, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0057, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0058, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x0059, 
+    IDC_NAME_LIST, 0x403, 2, 0
+0x005a, 
+    0
+END
+
+IDD_MAIN_PAGE2 DLGINIT
+BEGIN
+    IDC_CMB_TEAM, 0x403, 5, 0
+0xf9cb, 0xd0d3, "\000" 
+    0
+END
+
+IDD_FIND DLGINIT
+BEGIN
+    IDC_FCMB_IF, 0x403, 5, 0
+0xd5d0, 0xfbc3, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xf6b3, 0xfac9, 0xd5c8, 0xdac6, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xaebc, 0xe1b9, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xd4d0, 0xf0b1, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xf9cb, 0xf4ca, 0xd6b7, 0xe9d7, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xb0d6, 0xf1ce, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xa8d7, 0xb5d2, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xa7d1, 0xa3d0, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xe0b0, 0xb6bc, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xbad4, 0xb5cf, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xeac4, 0xb6bc, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xe7b5, 0xb0bb, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xd6ca, 0xfabb, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xa1d7, 0xb7d6, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xcad3, 0xe0b1, "\000" 
+    IDC_FCMB_IF, 0x403, 3, 0
+0x5151, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xe7b5, 0xd3d7, 0xcad3, 0xe4cf, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xabb4, 0xe6d5, "\000" 
+    IDC_FCMB_IF, 0x403, 9, 0
+0xf6b8, 0xcbc8, 0xf7d6, 0xb3d2, "\000" 
+    IDC_FCMB_IF, 0x403, 5, 0
+0xb8b1, 0xa2d7, "\000" 
+    0
+END
+
+IDD_REPLACE_BOX DLGINIT
+BEGIN
+    IDC_REP_IF, 0x403, 5, 0
+0xd5d0, 0xfbc3, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xf6b3, 0xfac9, 0xd5c8, 0xdac6, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xaebc, 0xe1b9, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xd4d0, 0xf0b1, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xf9cb, 0xf4ca, 0xd6b7, 0xe9d7, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xb0d6, 0xf1ce, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xa8d7, 0xb5d2, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xa7d1, 0xa3d0, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xe0b0, 0xb6bc, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xbad4, 0xb5cf, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xeac4, 0xb6bc, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xe7b5, 0xb0bb, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xd6ca, 0xfabb, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xa1d7, 0xb7d6, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xcad3, 0xe0b1, "\000" 
+    IDC_REP_IF, 0x403, 3, 0
+0x5151, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xe7b5, 0xd3d7, 0xcad3, 0xe4cf, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xabb4, 0xe6d5, "\000" 
+    IDC_REP_IF, 0x403, 9, 0
+0xf6b8, 0xcbc8, 0xf7d6, 0xb3d2, "\000" 
+    IDC_REP_IF, 0x403, 5, 0
+0xb8b1, 0xa2d7, "\000" 
+    0
+END
+
+IDD_IN_CSV DLGINIT
+BEGIN
+    IDC_CMB_REC, 0x403, 1, 0
+"\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xd5d0, 0xfbc3, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xf6b3, 0xfac9, 0xd5c8, 0xdac6, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xaebc, 0xe1b9, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xd4d0, 0xf0b1, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xf9cb, 0xf4ca, 0xd6b7, 0xe9d7, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xb0d6, 0xf1ce, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xa8d7, 0xb5d2, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xa7d1, 0xa3d0, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xe0b0, 0xb6bc, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xbad4, 0xb5cf, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xeac4, 0xb6bc, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xe7b5, 0xb0bb, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xd6ca, 0xfabb, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xd2bc, 0xa5cd, 0xa1d7, 0xb7d6, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xcad3, 0xe0b1, "\000" 
+    IDC_CMB_REC, 0x403, 3, 0
+0x5151, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xe7b5, 0xd3d7, 0xcad3, 0xe4cf, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xabb4, 0xe6d5, "\000" 
+    IDC_CMB_REC, 0x403, 9, 0
+0xf6b8, 0xcbc8, 0xf7d6, 0xb3d2, "\000" 
+    IDC_CMB_REC, 0x403, 5, 0
+0xb8b1, 0xa2d7, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\无标题.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_WAVE1               WAVE    DISCARDABLE     "1.wav"
+IDR_WAVE2               WAVE    DISCARDABLE     "2.wav"
+IDR_WAVE3               WAVE    DISCARDABLE     "start.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Contact(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Contact.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
